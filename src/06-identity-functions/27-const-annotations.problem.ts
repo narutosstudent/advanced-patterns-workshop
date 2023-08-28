@@ -1,6 +1,6 @@
 import { Equal, Expect } from "../helpers/type-utils";
 
-export const asConst = <T>(t: T) => t;
+export const asConst = <const T>(value: T): T => value;
 
 const fruits = asConst([
   {
