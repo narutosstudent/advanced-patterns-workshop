@@ -1,7 +1,11 @@
 import { it } from "vitest";
 import { Equal, Expect } from "../helpers/type-utils";
 
-export const narrowFruits = <TFruits>(t: TFruits) => t;
+export const narrowFruits = <
+  TFruits extends Array<Record<"name" | "price", unknown>>
+>(
+  t: TFruits
+) => t;
 
 const fruits = narrowFruits([
   {
